@@ -24,27 +24,20 @@ or download and extract zip
 Install libs: readline or libedit, openssl and (if you want to use config) libconfig and liblua.
 If you do not want to use them pass options --disable-libconfig and --disable-liblua respectively.
 
-On ubuntu use: 
 
-    $ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev
+Install libs: readline openssl and (if you want to use config) libconfig.
+On Ubuntu use: 
+    
+    $ sudo apt-get install libreadline-dev libconfig-dev libssl-dev
 
-On gentoo:
+On Ubuntu 12.04, you need to install lua5.2:
 
-    $ sudo emerge -av sys-libs/readline dev-libs/libconfig dev-libs/openssl dev-lang/lua
+    $ sudo apt-get install lua5.2 
 
-On Fedora:
-
-    $ sudo yum install lua-devel openssl-devel libconfig-devel readline-devel
-
-On FreeBSD:
-
-    $ pkg install libconfig libexecinfo lua52
-
-On OpenBSD:
-
-    $ pkg_add libconfig libexecinfo lua
-
-Then,
+On Gentoo:
+    
+    $ sudo emerge -av sys-libs/readline dev-libs/libconfig dev-libs/openssl
+Then
 
     $ ./configure
     $ make
